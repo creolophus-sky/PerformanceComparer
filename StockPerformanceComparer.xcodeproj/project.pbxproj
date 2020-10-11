@@ -3,27 +3,47 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		420845FD58CC05C3D61B919B /* Pods_StockPerformanceComparer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30A810C63EDCF1312599967F /* Pods_StockPerformanceComparer.framework */; };
 		4758FE6E2531D335009E8EFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4758FE6D2531D335009E8EFA /* AppDelegate.swift */; };
 		4758FE702531D335009E8EFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4758FE6F2531D335009E8EFA /* SceneDelegate.swift */; };
-		4758FE722531D335009E8EFA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4758FE712531D335009E8EFA /* ViewController.swift */; };
+		4758FE722531D335009E8EFA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4758FE712531D335009E8EFA /* MainViewController.swift */; };
 		4758FE752531D335009E8EFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4758FE732531D335009E8EFA /* Main.storyboard */; };
 		4758FE772531D337009E8EFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4758FE762531D337009E8EFA /* Assets.xcassets */; };
 		4758FE7A2531D337009E8EFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4758FE782531D337009E8EFA /* LaunchScreen.storyboard */; };
+		4758FE842531D376009E8EFA /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4758FE832531D376009E8EFA /* APIRequest.swift */; };
+		4758FE902531D7D3009E8EFA /* StockRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4758FE8F2531D7D3009E8EFA /* StockRequest.swift */; };
+		4758FE942531D862009E8EFA /* StockPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4758FE932531D862009E8EFA /* StockPrice.swift */; };
+		4758FE992531DA12009E8EFA /* ResponseTranslator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4758FE982531DA12009E8EFA /* ResponseTranslator.swift */; };
+		4758FE9C2531DA94009E8EFA /* ResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4758FE9B2531DA94009E8EFA /* ResponseParser.swift */; };
+		4758FE9F2531DCDE009E8EFA /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4758FE9E2531DCDE009E8EFA /* Stock.swift */; };
+		4758FEC42531F914009E8EFA /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4758FEC32531F914009E8EFA /* DateExtension.swift */; };
+		4758FECB25320A74009E8EFA /* CandlestickChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4758FECA25320A74009E8EFA /* CandlestickChartViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		02540F39B21CB11739A719B3 /* Pods-StockPerformanceComparer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockPerformanceComparer.debug.xcconfig"; path = "Target Support Files/Pods-StockPerformanceComparer/Pods-StockPerformanceComparer.debug.xcconfig"; sourceTree = "<group>"; };
+		30A810C63EDCF1312599967F /* Pods_StockPerformanceComparer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StockPerformanceComparer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4758FE6A2531D335009E8EFA /* StockPerformanceComparer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockPerformanceComparer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4758FE6D2531D335009E8EFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4758FE6F2531D335009E8EFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4758FE712531D335009E8EFA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4758FE712531D335009E8EFA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		4758FE742531D335009E8EFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4758FE762531D337009E8EFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4758FE792531D337009E8EFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4758FE7B2531D337009E8EFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4758FE832531D376009E8EFA /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		4758FE8F2531D7D3009E8EFA /* StockRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockRequest.swift; sourceTree = "<group>"; };
+		4758FE932531D862009E8EFA /* StockPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockPrice.swift; sourceTree = "<group>"; };
+		4758FE982531DA12009E8EFA /* ResponseTranslator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseTranslator.swift; sourceTree = "<group>"; };
+		4758FE9B2531DA94009E8EFA /* ResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseParser.swift; sourceTree = "<group>"; };
+		4758FE9E2531DCDE009E8EFA /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		4758FEC32531F914009E8EFA /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		4758FECA25320A74009E8EFA /* CandlestickChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CandlestickChartViewController.swift; sourceTree = "<group>"; };
+		5EE7F362897382C12C5EE025 /* Pods-StockPerformanceComparer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockPerformanceComparer.release.xcconfig"; path = "Target Support Files/Pods-StockPerformanceComparer/Pods-StockPerformanceComparer.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +51,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				420845FD58CC05C3D61B919B /* Pods_StockPerformanceComparer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B578707C4B97C87114E8DE0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				30A810C63EDCF1312599967F /* Pods_StockPerformanceComparer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4758FE612531D335009E8EFA = {
 			isa = PBXGroup;
 			children = (
 				4758FE6C2531D335009E8EFA /* StockPerformanceComparer */,
 				4758FE6B2531D335009E8EFA /* Products */,
+				90E445AE1857B74DD937F995 /* Pods */,
+				2B578707C4B97C87114E8DE0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +87,64 @@
 		4758FE6C2531D335009E8EFA /* StockPerformanceComparer */ = {
 			isa = PBXGroup;
 			children = (
+				4758FEC925320A52009E8EFA /* ViewController */,
+				4758FEC22531F904009E8EFA /* Extensions */,
+				4758FE922531D854009E8EFA /* Model */,
+				4758FE822531D364009E8EFA /* Network */,
 				4758FE6D2531D335009E8EFA /* AppDelegate.swift */,
 				4758FE6F2531D335009E8EFA /* SceneDelegate.swift */,
-				4758FE712531D335009E8EFA /* ViewController.swift */,
 				4758FE732531D335009E8EFA /* Main.storyboard */,
 				4758FE762531D337009E8EFA /* Assets.xcassets */,
 				4758FE782531D337009E8EFA /* LaunchScreen.storyboard */,
 				4758FE7B2531D337009E8EFA /* Info.plist */,
 			);
 			path = StockPerformanceComparer;
+			sourceTree = "<group>";
+		};
+		4758FE822531D364009E8EFA /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4758FE832531D376009E8EFA /* APIRequest.swift */,
+				4758FE8F2531D7D3009E8EFA /* StockRequest.swift */,
+				4758FE982531DA12009E8EFA /* ResponseTranslator.swift */,
+				4758FE9B2531DA94009E8EFA /* ResponseParser.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		4758FE922531D854009E8EFA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4758FE932531D862009E8EFA /* StockPrice.swift */,
+				4758FE9E2531DCDE009E8EFA /* Stock.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4758FEC22531F904009E8EFA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4758FEC32531F914009E8EFA /* DateExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4758FEC925320A52009E8EFA /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4758FE712531D335009E8EFA /* MainViewController.swift */,
+				4758FECA25320A74009E8EFA /* CandlestickChartViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		90E445AE1857B74DD937F995 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				02540F39B21CB11739A719B3 /* Pods-StockPerformanceComparer.debug.xcconfig */,
+				5EE7F362897382C12C5EE025 /* Pods-StockPerformanceComparer.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +154,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4758FE7E2531D337009E8EFA /* Build configuration list for PBXNativeTarget "StockPerformanceComparer" */;
 			buildPhases = (
+				B468E652FE106480810A7C19 /* [CP] Check Pods Manifest.lock */,
 				4758FE662531D335009E8EFA /* Sources */,
 				4758FE672531D335009E8EFA /* Frameworks */,
 				4758FE682531D335009E8EFA /* Resources */,
+				CC04214CE13F10810140D781 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,14 +214,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B468E652FE106480810A7C19 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StockPerformanceComparer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC04214CE13F10810140D781 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StockPerformanceComparer/Pods-StockPerformanceComparer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-StockPerformanceComparer/Pods-StockPerformanceComparer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-StockPerformanceComparer/Pods-StockPerformanceComparer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4758FE662531D335009E8EFA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4758FE722531D335009E8EFA /* ViewController.swift in Sources */,
+				4758FE902531D7D3009E8EFA /* StockRequest.swift in Sources */,
+				4758FEC42531F914009E8EFA /* DateExtension.swift in Sources */,
+				4758FE722531D335009E8EFA /* MainViewController.swift in Sources */,
+				4758FECB25320A74009E8EFA /* CandlestickChartViewController.swift in Sources */,
+				4758FE942531D862009E8EFA /* StockPrice.swift in Sources */,
+				4758FE9C2531DA94009E8EFA /* ResponseParser.swift in Sources */,
 				4758FE6E2531D335009E8EFA /* AppDelegate.swift in Sources */,
+				4758FE842531D376009E8EFA /* APIRequest.swift in Sources */,
+				4758FE992531DA12009E8EFA /* ResponseTranslator.swift in Sources */,
 				4758FE702531D335009E8EFA /* SceneDelegate.swift in Sources */,
+				4758FE9F2531DCDE009E8EFA /* Stock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,12 +415,14 @@
 		};
 		4758FE7F2531D337009E8EFA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02540F39B21CB11739A719B3 /* Pods-StockPerformanceComparer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UFVQR8GUDT;
 				INFOPLIST_FILE = StockPerformanceComparer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,18 +430,20 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.vadym.patalakh.StockPerformanceComparer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		4758FE802531D337009E8EFA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EE7F362897382C12C5EE025 /* Pods-StockPerformanceComparer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = UFVQR8GUDT;
 				INFOPLIST_FILE = StockPerformanceComparer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +451,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.vadym.patalakh.StockPerformanceComparer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

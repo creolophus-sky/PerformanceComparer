@@ -1,24 +1,164 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q5A-9p-UI7">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="JIw-VR-waZ">
+            <objects>
+                <navigationController id="Q5A-9p-UI7" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="snE-vD-UBa">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="opW-TM-2nS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6fN-au-dhG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-687" y="94"/>
+        </scene>
+        <!--Compare Performance-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="StockPerformanceComparer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="NWU-pl-2CK">
+                                <rect key="frame" x="188.5" y="456.5" width="37" height="37"/>
+                            </activityIndicatorView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PGr-2q-lBC" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="159" width="414" height="703"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDL-74-p3j">
+                                        <rect key="frame" x="207" y="687" width="0.0" height="0.0"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="VDL-74-p3j" secondAttribute="bottom" constant="16" id="Aj3-MU-oeX"/>
+                                    <constraint firstItem="VDL-74-p3j" firstAttribute="centerX" secondItem="PGr-2q-lBC" secondAttribute="centerX" id="mHE-Da-ERD"/>
+                                </constraints>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="KDO-TP-DHe">
+                                <rect key="frame" x="148.5" y="118" width="117" height="32"/>
+                                <segments>
+                                    <segment title="Week"/>
+                                    <segment title="Month"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentedControllerValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="fGY-nS-O4g"/>
+                                </connections>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lDU-Hq-0yt">
+                                <rect key="frame" x="317" y="118" width="81" height="31"/>
+                                <state key="normal" title="Candlestick"/>
+                                <connections>
+                                    <segue destination="DZa-Ie-GnF" kind="show" id="bdo-Rk-Eug"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KDO-TP-DHe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="COt-Fq-aFT"/>
+                            <constraint firstItem="PGr-2q-lBC" firstAttribute="top" secondItem="KDO-TP-DHe" secondAttribute="bottom" constant="10" id="NKs-ZC-5Vb"/>
+                            <constraint firstItem="lDU-Hq-0yt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KDO-TP-DHe" secondAttribute="trailing" constant="10" id="Nnn-MM-1Z7"/>
+                            <constraint firstItem="lDU-Hq-0yt" firstAttribute="centerY" secondItem="KDO-TP-DHe" secondAttribute="centerY" id="OR5-7C-oR0"/>
+                            <constraint firstItem="lDU-Hq-0yt" firstAttribute="top" secondItem="KDO-TP-DHe" secondAttribute="top" id="SbD-Yj-ZSI"/>
+                            <constraint firstItem="NWU-pl-2CK" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="dD0-g7-uAp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lDU-Hq-0yt" secondAttribute="trailing" constant="16" id="jEh-kU-acK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PGr-2q-lBC" secondAttribute="trailing" id="pT7-98-UIN"/>
+                            <constraint firstItem="PGr-2q-lBC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qUX-Et-EOQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PGr-2q-lBC" secondAttribute="bottom" id="qiv-pF-TF2"/>
+                            <constraint firstItem="NWU-pl-2CK" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ruh-g1-oKg"/>
+                            <constraint firstItem="KDO-TP-DHe" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="zch-2X-fqX"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Compare Performance" id="1qd-gm-IGE"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="NWU-pl-2CK" id="t5H-3C-SP4"/>
+                        <outlet property="chartView" destination="PGr-2q-lBC" id="hGK-Em-Jes"/>
+                        <outlet property="detailsLabel" destination="VDL-74-p3j" id="Xlp-Zs-lcD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="93.75"/>
+        </scene>
+        <!--Candlestick-->
+        <scene sceneID="NP5-DQ-JEt">
+            <objects>
+                <viewController title="Candlestick" modalPresentationStyle="fullScreen" id="DZa-Ie-GnF" customClass="CandlestickChartViewController" customModule="StockPerformanceComparer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P9v-bt-0H0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="f7P-Rt-yCS">
+                                <rect key="frame" x="125" y="118" width="164" height="32"/>
+                                <segments>
+                                    <segment title="AAPL"/>
+                                    <segment title="MSFT"/>
+                                    <segment title="SPY"/>
+                                </segments>
+                                <connections>
+                                    <action selector="handleSegmentedControlValueChanged:" destination="DZa-Ie-GnF" eventType="valueChanged" id="MmV-db-Tjj"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fFl-Oo-IPv" customClass="CandleStickChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="159" width="414" height="703"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EOt-9f-agU">
+                                        <rect key="frame" x="186" y="666" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="EOt-9f-agU" secondAttribute="bottom" constant="16" id="5c1-8z-2mt"/>
+                                    <constraint firstItem="EOt-9f-agU" firstAttribute="centerX" secondItem="fFl-Oo-IPv" secondAttribute="centerX" id="cRq-nr-JmX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bb8-CP-sKX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bb8-CP-sKX" firstAttribute="bottom" secondItem="fFl-Oo-IPv" secondAttribute="bottom" id="931-al-1cx"/>
+                            <constraint firstItem="f7P-Rt-yCS" firstAttribute="centerX" secondItem="bb8-CP-sKX" secondAttribute="centerX" id="SZX-95-ozA"/>
+                            <constraint firstItem="fFl-Oo-IPv" firstAttribute="top" secondItem="f7P-Rt-yCS" secondAttribute="bottom" constant="10" id="VJY-eg-bgo"/>
+                            <constraint firstItem="f7P-Rt-yCS" firstAttribute="top" secondItem="bb8-CP-sKX" secondAttribute="top" constant="30" id="dNM-ND-d3h"/>
+                            <constraint firstItem="fFl-Oo-IPv" firstAttribute="leading" secondItem="bb8-CP-sKX" secondAttribute="leading" id="dpM-Rp-R8f"/>
+                            <constraint firstItem="bb8-CP-sKX" firstAttribute="trailing" secondItem="fFl-Oo-IPv" secondAttribute="trailing" id="tyI-ZM-rhd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Candlestick" id="D9y-3K-dc4"/>
+                    <connections>
+                        <outlet property="chartView" destination="fFl-Oo-IPv" id="weS-VE-odU"/>
+                        <outlet property="detailsLabel" destination="EOt-9f-agU" id="Ob8-xl-U74"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bgd-At-nbj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="765" y="94"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
