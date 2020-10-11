@@ -100,7 +100,7 @@ class CandlestickChartViewController: UIViewController, IAxisValueFormatter, Cha
         let prices = getPrices()
 
         let date = Date(timeIntervalSince1970: prices[Int(value)].timestamp)
-        return date.toMonthRepresentableString()
+        return date.toRepresantableString()
     }
 
     func stringForValue(_ value: Double, entry: ChartDataEntry, dataSetIndex: Int, viewPortHandler: ViewPortHandler?) -> String {

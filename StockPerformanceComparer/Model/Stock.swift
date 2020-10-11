@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftyJSON
 
 protocol PerformanceValuable {
     func getPerformanceValue(with endingPrice: Double) -> Double
@@ -44,13 +43,12 @@ class Stock: PerformanceValuable {
         guard let startingPrice = prices.first?.close else { return }
 
         for (index, price) in prices.enumerated() {
-            let data: Double
             if index == 0 {
                 performanceData.append(PerformanceData(timestamp: price.timestamp, data: 0))
                 continue
             }
 
-            data = calculatePerformanceValue(start: startingPrice, end: price.close)
+            let data = calculatePerformanceValue(start: startingPrice, end: price.close)
 
             performanceData.append(PerformanceData(timestamp: price.timestamp, data: data))
         }

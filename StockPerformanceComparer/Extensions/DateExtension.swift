@@ -8,13 +8,7 @@
 import Foundation
 
 extension Date {
-    func toWeekRepresantableString() -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MM-dd"
-        return dateFormatter.string(from: self)
-    }
-
-    func toMonthRepresentableString() -> String {
+    func toRepresantableString() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM-dd"
         return dateFormatter.string(from: self)

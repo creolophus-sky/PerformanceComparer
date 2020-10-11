@@ -132,7 +132,7 @@ class MainViewController: UIViewController, IAxisValueFormatter, IValueFormatter
     // MARK: IAxisValueFormatter Methods
     func stringForValue(_ value: Double, axis: AxisBase?) -> String {
         let date = Date(timeIntervalSince1970: value)
-        return date.toMonthRepresentableString()
+        return date.toRepresantableString()
     }
 
     // MARK: IValueFormatter Methods
