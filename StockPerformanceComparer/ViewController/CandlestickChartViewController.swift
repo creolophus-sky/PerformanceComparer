@@ -64,10 +64,10 @@ class CandlestickChartViewController: UIViewController, IAxisValueFormatter, Cha
         }
 
         dataSet.valueFormatter = valueFormatter
-        dataSet.neutralColor = .black
-        dataSet.increasingColor = .black
-        dataSet.decreasingColor = .black
-        dataSet.shadowColor = .black
+        dataSet.neutralColor = .label
+        dataSet.increasingColor = .label
+        dataSet.decreasingColor = .label
+        dataSet.shadowColor = .label
         dataSet.shadowWidth = 1
         dataSet.barSpace = 0.3
 
